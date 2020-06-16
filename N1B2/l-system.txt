@@ -1,0 +1,55 @@
+Projeto: N1 2B
+
+Desafio: L-Systems
+Codificação em Java ou Python
+
+Gramática da linguagem:
+
+Σ   ☞ Alfabeto da linguagem
+n   ☞ Passos, etapas
+ω   ☞ Axioma, condição inicial
+δ   ☞ Angulo
+pX  ☞ Regras de produção
+
+Σ : L, R, F, +, -
+n : 2
+ω : L
+δ : 90º
+p1 : L → +RF − LF L − F R+
+p2 : R → −LF + RF R + F L−
+
+--------------------------------------------
+
+Σ : F, +, -
+n : 3
+ω : F-F-F-F
+δ : 90º
+p1 : F → +FF
+
+0: F-F-F-F
+1: +FF-+FF-+FF-+FF
+2: ++FF+FF-++FF+FF-++FF+FF-++FF+FF
+3: +++FF+FF++FF+FF-+++FF+FF++FF+FF-+++FF+FF++FF+FF-+++FF+FF++FF+FF
+
+---------------------
+Projeto:
+
+Análise
+- Definir uma gramática em arquivo texto
+- Ler arquivo com a definição da gramática
+- Aplicar as regras de produção, recursivamente → Gerar o string final
+
+Sínstese
+- Gerar image com base no string final
+    2D - SVG - https://www.w3schools.com/graphics/svg_intro.asp
+    3D - X3D - https://doc.x3dom.org/tutorials/basics/hello/index.html
+- Salvar arquivo texto, pode ser svg ou x3d em HTML
+
+Referencia:
+https://en.wikipedia.org/wiki/L-system
+http://www.algorithmicbotany.org/
+https://resources.wolframcloud.com/FunctionRepository/resources/LSystemPlot
+
+Vídeos:
+Coding Challenge #16: L-System Fractal Trees - https://www.youtube.com/watch?v=E1B4UoSQMFw
+8.5: L-Systems - The Nature of Code - https://www.youtube.com/watch?v=f6ra024-ASY&t=19s
